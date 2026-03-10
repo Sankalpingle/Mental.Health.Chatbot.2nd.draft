@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Chat — Mindful Chat{% endblock %}
+{% block content %}
+<section class="chat-page">
+    <div class="chat-header">
+        <h1>Chat</h1>
+        <p>Share how you're feeling. You're in a safe space.</p>
+    </div>
+    <div class="chat-container">
+        <div class="chat-messages">
+            {% for chat in chats %}
+            <div class="chat-message user">
+                <span class="chat-label">You</span>
+                <p>{{ chat[1] }}</p>
+                <span class="chat-meta">{{ chat[0] }} · {{ chat[2] }}</span>
+            </div>
+            {% if chat[3] %}
+            <div class="chat-message bot">
+                <span class="chat-label">Support</span>
+                <p>{{ chat[3] }}</p>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <form method="POST" class="chat-form">
+            <input type="text" name="message" placeholder="Type your message..." required autocomplete="off">
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+    </div>
+    <div class="chat-actions">
+        <a href="{{ url_for('graph') }}" class="btn btn-secondary">View Mood Graph</a>
+        <a href="{{ url_for('export_pdf') }}" class="btn btn-secondary">Export PDF</a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}About — Mindful Chat{% endblock %}
+{% block content %}
+<section class="page-header">
+    <h1>About Mindful Chat</h1>
+    <p>Supporting your mental wellness journey.</p>
+</section>
+<section class="about-content">
+    <div class="about-block">
+        <h2>Our Mission</h2>
+        <p>Mindful Chat provides a safe, private space to express your feelings and track your emotional wellbeing. We're not a replacement for professional help—we're a companion that helps you stay aware of your mood and reach out when needed.</p>
+    </div>
+    <div class="about-block">
+        <h2>How It Works</h2>
+        <ul>
+            <li><strong>Chat</strong> — Share what's on your mind. Our system gently detects emotional tone and offers supportive responses.</li>
+            <li><strong>Dashboard</strong> — View your mood over time and access all tools in one place.</li>
+            <li><strong>Reminders</strong> — Schedule check-ins to build a habit of self-reflection.</li>
+            <li><strong>Resources</strong> — Find crisis helplines and self-care tips when you need them.</li>
+        </ul>
+    </div>
+    <div class="about-block">
+        <h2>Important</h2>
+        <p>If you're experiencing a crisis or having thoughts of self-harm, please contact a mental health professional or crisis line immediately. See our <a href="{{ url_for('resources') }}">Resources</a> page for numbers and links.</p>
+    </div>
+</section>
+{% endblock %}

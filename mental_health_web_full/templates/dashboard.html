@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Dashboard — Mindful Chat{% endblock %}
+{% block content %}
+<section class="page-header">
+    <h1>Hello, {{ user }}</h1>
+    <p>Your wellness dashboard</p>
+</section>
+<section class="dashboard-grid">
+    <a href="{{ url_for('chat') }}" class="dash-card">
+        <span class="dash-icon">💬</span>
+        <h3>Chat</h3>
+        <p>Share how you're feeling</p>
+    </a>
+    <a href="{{ url_for('graph') }}" class="dash-card">
+        <span class="dash-icon">📈</span>
+        <h3>Mood Graph</h3>
+        <p>View your mood trend</p>
+    </a>
+    <a href="{{ url_for('export_pdf') }}" class="dash-card">
+        <span class="dash-icon">📄</span>
+        <h3>Export PDF</h3>
+        <p>Download your chat history</p>
+    </a>
+    <a href="{{ url_for('reminders') }}" class="dash-card">
+        <span class="dash-icon">🔔</span>
+        <h3>Reminders</h3>
+        <p>Manage check-in reminders</p>
+    </a>
+    <a href="{{ url_for('profile') }}" class="dash-card">
+        <span class="dash-icon">👤</span>
+        <h3>Profile</h3>
+        <p>Update your profile</p>
+    </a>
+    <a href="{{ url_for('resources') }}" class="dash-card">
+        <span class="dash-icon">🆘</span>
+        <h3>Resources</h3>
+        <p>Crisis helplines & tips</p>
+    </a>
+</section>
+{% endblock %}

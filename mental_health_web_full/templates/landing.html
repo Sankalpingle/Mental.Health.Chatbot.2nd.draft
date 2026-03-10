@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Mindful Chat — Mental Wellness Companion{% endblock %}
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>Your mental wellness companion</h1>
+        <p class="hero-sub">A supportive space to check in, track your mood, and find resources. You're not alone.</p>
+        <div class="hero-actions">
+            <a href="{{ url_for('login') }}" class="btn btn-primary">Get Started</a>
+            <a href="{{ url_for('about') }}" class="btn btn-secondary">Learn More</a>
+        </div>
+    </div>
+</section>
+<section class="features">
+    <h2>What we offer</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <span class="feature-icon">💬</span>
+            <h3>Emotion-Aware Chat</h3>
+            <p>Share how you feel. Our chatbot responds with supportive, emotion-aware replies.</p>
+        </div>
+        <div class="feature-card">
+            <span class="feature-icon">📈</span>
+            <h3>Mood Tracking</h3>
+            <p>See your mood trend over time with simple, clear visualizations.</p>
+        </div>
+        <div class="feature-card">
+            <span class="feature-icon">🔔</span>
+            <h3>Reminders</h3>
+            <p>Set check-in reminders to build a consistent wellness routine.</p>
+        </div>
+        <div class="feature-card">
+            <span class="feature-icon">🆘</span>
+            <h3>Crisis Resources</h3>
+            <p>Quick access to helplines and professional support when you need it.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

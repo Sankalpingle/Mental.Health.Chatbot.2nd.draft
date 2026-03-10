@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Login — Mindful Chat{% endblock %}
+{% block content %}
+<section class="auth-section">
+    <div class="auth-card">
+        <h1>Welcome back</h1>
+        <p>Sign in or create an account to continue.</p>
+        <form method="POST" class="auth-form">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter username" required autocomplete="username">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter password" required autocomplete="current-password">
+            <button type="submit" class="btn btn-primary btn-block">Login / Register</button>
+        </form>
+        <p class="auth-note">Don't have an account? Enter a username and password to create one.</p>
+    </div>
+</section>
+{% endblock %}
